@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Simple Chatbot</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="chat-container">
@@ -14,6 +14,17 @@
       <button onclick="sendMessage()">Send</button>
     </div>
   </div>
+
+  <!-- VCS Buttons -->
+  <div style="margin-top: 20px; text-align: center;">
+    <button onclick="VCS.init()">Init VCS</button>
+    <button onclick="VCS.commit(prompt('Enter commit message:'))">Commit</button>
+    <button onclick="VCS.log()">View Log</button>
+    <button onclick="VCS.restore(prompt('Enter version ID to restore:'))">Restore</button>
+  </div>
+
+  <!-- Scripts -->
   <script src="script.js"></script>
+  <script src="vcs.js"></script> <!-- Add this line to link your VCS logic -->
 </body>
 </html>
